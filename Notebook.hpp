@@ -6,14 +6,13 @@ namespace ariel {
     class Notebook
     {
     private:
-        std::unordered_map<std::string, int> note;
+        std::unordered_map<std::string, char> note;
     public:
         Notebook();
-        Notebook(double o);
         ~Notebook();
-        void write(unsigned int page, unsigned int row, unsigned int col, ariel::Direction dir, std::string s);
-        std::string read(unsigned int page, unsigned int row, unsigned int col, ariel::Direction dir, unsigned int length);
-        void erase(unsigned int page, unsigned int row, unsigned int col, ariel::Direction dir, unsigned int length);
+        void write(int page, int row, int col, ariel::Direction dir, std::string str);
+        std::string read(int page, int row, int col, ariel::Direction dir, int length);
+        void erase(int page, int row, int col, ariel::Direction dir, int length);
         void show(int i);
     };
 }
